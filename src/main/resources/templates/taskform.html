@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+</head>
+<body>
+<h1>To Do List</h1>
+<form action="#" th:action="@{/process}" th:object="${task}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    Name: <input type="text" th:field="*{name}"/>
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span> <br/>
+
+    <button type="submit" value="Submit">Submit</button>
+</form>
+
+</body>
+</html>

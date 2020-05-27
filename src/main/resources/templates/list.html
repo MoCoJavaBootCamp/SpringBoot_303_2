@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/}" th:object="${}" method="post">
+    Name: <input type="" th:field="*{}"/>
+    <span th:if="${#fields.hasErrors('')}" th:errors="*{}"></span> <br/>
+</form>
+</body>
+</html>
+
+Create a Todo list application that has a class that stores the id, task name, due date and priority of each Todo
+item. Create templates and controller end points to handle creating, updating and deleting Todo items. Also,
+create an endpoint that handles listing all the Todo items.

@@ -1,11 +1,9 @@
 package com.example.demo;
 
 import com.sun.istack.NotNull;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -18,6 +16,8 @@ public class Task {
     private String name;
 
     @NotNull
+    @DateTimeFormat(pattern = "MM/dd/yyyy")
+    @Temporal(TemporalType.DATE)
     private Date dueDate;
 
     @NotNull

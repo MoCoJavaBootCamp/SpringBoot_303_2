@@ -10,7 +10,13 @@
     <input type="hidden" th:field="*{id}" />
     Name: <input type="text" th:field="*{name}"/>
     <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span> <br/>
-
+    Due Date: <input type="date" th:field="*{dueDate}"/>
+    <span th:if="${#fields.hasErrors('dueDate')}" th:errors="*{dueDate}"></span> <br/>
+    Priority:
+        Low <input type="radio" th:field="*{priority}" value="low"/>
+        Medium <input type="radio" th:field="*{priority}" value="medium"/>
+        High <input type="radio" th:field="*{priority}" value="high"/>
+        <span th:if="${#fields.hasErrors('priority')}" th:errors="*{priority}"></span> <br/>
     <button type="submit" value="Submit">Submit</button>
 </form>
 
